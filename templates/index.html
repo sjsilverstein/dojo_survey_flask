@@ -1,0 +1,31 @@
+<!-- Stephen Silverstein
+	https://github.com/sjsilverstein -->
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<meta name="description" content="The text here describes what the webpage
+		is about. It's what will show up in search results for search engines like
+		google under the title of the webpage. It's important that this is relevant
+		to your page and well written!">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/myStyle.css')}}"> <!-- my style.css -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="{{ url_for('static', filename='js/myJavaScript.js') }}"></script> <!-- myJavaScript -->
+	</head>
+	<body>
+		<div class="wrapper">
+			<form action="/process" method="POST">
+				Your Name: <input type="text" name="name">
+				Dojo Location: 
+				<select name="location">
+					<option value="Seattle">Seattle</option>
+					<option value="New York">New York</option>
+					<option value="San Jose">San Jose</option>
+					<option value="Testing">Testing</option>
+				</select>
+				Comment (optional): <textarea name="comment" rows="10" cols="50">Write something here...</textarea>
+			</form>
+		</div>
+	</body>
+	</html>
